@@ -20,6 +20,7 @@
                             <label for="password">Mot de passe</label>
                             {{ form_widget(form._password, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre mot de passe', 'required': 'required'}}) }}
                         </div>
+                        {{ form_row(form._csrf_token) }}
                         <button type="submit" class="btn-login">Se connecter</button>
                     {{ form_end(form) }}
                 </div>

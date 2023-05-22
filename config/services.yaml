@@ -23,5 +23,11 @@ services:
     App\Security\CustomUserProvider:
         arguments: ['@doctrine.orm.entity_manager']
 
+    App\Controller\SecurityController:
+        autowire: true
+        autoconfigure: true
+        public: true
+        tags: ['controller.service_arguments']
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
