@@ -14,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/login", name="app_login", methods={"GET","POST"})
      */
     public function login(AuthenticationUtils $authenticationUtils, Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
@@ -50,5 +50,13 @@ class SecurityController extends AbstractController
             'last_username' => $lastUsername,
             'error' => $error,
         ]);
+    }
+
+    /**
+     * @Route("/logout", name="app_logout", methods={"GET"})
+     */
+    public function logout()
+    {
+        
     }
 }

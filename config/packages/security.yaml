@@ -1,11 +1,7 @@
 security:
-    enable_authenticator_manager: true
-
-    # Hashing passwords configuration
-    password_hashers:
-        # Configure your User entity password hasher
+    encoders:
         App\Entity\User:
-            algorithm: auto
+            algorithm: auto  # Utilisation de l'algorithme recommandé par Symfony
 
     # User providers define how users are loaded
     providers:
@@ -13,24 +9,22 @@ security:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: username
-
-        custom_user_provider:
-            id: App\Security\CustomUserProvider
+                property: username  # Attribut de l'utilisateur utilisé pour l'authentification
 
     # Firewalls define how users can authenticate
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+            security: false  # Pas de sécurité pour le mode développeur
         main:
-            lazy: false
-            provider: app_user_provider
-            # Configure how the user should authenticate (e.g., login form, API tokens, etc.)
+            anonymous: lazy
+            provider: app_user_provider  # Fournisseur à utiliser pour ce pare-feu
             form_login:
-                login_path: login
-                check_path: login
-                enable_csrf: true
+                login_path: app_login
+                check_path: app_login
+                csrf_token_generator: security.csrf.token_manager
+            logout:
+                path: app_logout  # Route à appeler pour se déconnecter
 
     # Access control rules define which roles have access to different parts of your site
     access_control:
@@ -40,10 +34,10 @@ security:
 
 when@test:
     security:
-        password_hashers:
+        encoders:
             # Password hashing settings for the test environment
             App\Entity\User:
-                algorithm: auto
+                algorithm: auto  # Utilisation de l'algorithme recommandé par Symfony
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
