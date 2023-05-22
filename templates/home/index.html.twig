@@ -1,0 +1,146 @@
+{# templates/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'partials/carousel.twig' %}
+    <main class="container main-bg">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="match-section">
+                    <h3>Match à venir</h3>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Calendrier</a>
+                    </div>
+                </div>
+                <div class="sports-section">
+                    <h3>Sports</h3>
+                    <div class="sports-list">
+                        <div class="sports-container">
+                            <div class="sport-item">
+                                <div class="sport-title">
+                                    <i class="fas fa-futbol sport-icon"></i>
+                                    Football
+                                </div>
+                                <a class="collapse-icon" data-toggle="collapse" href="#footballLeagues" role="button" aria-expanded="false" aria-controls="footballLeagues" data-parent=".sports-list">
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse" id="footballLeagues">
+                                <div class="sport-leagues">
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        Premier League
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        La Liga
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        Serie A
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sport-item">
+                                <div class="sport-title">
+                                    <i class="fas fa-basketball-ball sport-icon"></i>
+                                    Basketball
+                                </div>
+                                <a class="collapse-icon" data-toggle="collapse" href="#basketballLeagues" role="button" aria-expanded="false" aria-controls="basketballLeagues" data-parent=".sports-list">
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse" id="basketballLeagues">
+                                <div class="sport-leagues">
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        NBA
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        EuroLeague
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        Liga ACB
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sport-item">
+                                <div class="sport-title">
+                                    <i class="fas fa-tennis-ball sport-icon"></i>
+                                    Tennis
+                                </div>
+                                <a class="collapse-icon" data-toggle="collapse" href="#tennisLeagues" role="button" aria-expanded="false" aria-controls="tennisLeagues" data-parent=".sports-list">
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                            </div>
+                            <div class="collapse" id="tennisLeagues">
+                                <div class="sport-leagues">
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        Wimbledon
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        US Open
+                                    </div>
+                                    <div class="league-item">
+                                        <i class="fas fa-trophy league-icon"></i>
+                                        Australian Open
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="my-4 text-white">Match à la une</h1>
+                <div class="match-card">
+                    <img class="card-img-top" src="https://via.placeholder.com/750x300" alt="Card image cap">
+                    <div class="card-body">
+                        <i class="material-icons" style="position: absolute; top: 10px; left: 10px;">sports_soccer</i>
+                        <h2 class="card-title">Équipe 1 VS Équipe 2</h2>
+                        <p class="card-text">Football : Premier League</p>
+                        <div class="team-odds">
+                            <button type="button" class="team-odds-box btn btn-primary" data-toggle="modal" data-target="#team1Modal">
+    <p>Équipe 1</p>
+    <p>Côte: <span style="color: red;">2.5</span></p>
+</button>
+
+<button type="button" class="team-odds-box btn btn-primary" data-toggle="modal" data-target="#team2Modal">
+    <p>Équipe 2</p>
+    <p>Côte: <span style="color: red;">3.2</span></p>
+</button>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="my-4 text-white">Matchs en cours</h1>
+                <div class="match-card">
+                    <img class="card-img-top" src="https://via.placeholder.com/750x300" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title">Basketball : NBA</h2>
+                        <p class="card-text">Détails du match et côte</p>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <img class="card-img-top" src="https://via.placeholder.com/750x300" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title">Tennis : Roland Garros</h2>
+                        <p class="card-text">Détails du match et côte</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3 class="my-4 text-white">Mes paris</h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Paris 1</a>
+                    <a href="#" class="list-group-item">Paris 2</a>
+                    <a href="#" class="list-group-item">Paris 3</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

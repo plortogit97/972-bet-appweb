@@ -1,0 +1,287 @@
+body {
+    background-color: #004225;
+}
+
+/* CSS pour la page principale */
+.carousel-item {
+  height: 30vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.diagonal-box {
+  position: relative;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+}
+
+.card img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* Couleurs spécifiques */
+.first-nav {
+    background-color: #252525;
+}
+
+.navbar-light {
+  background-color: #147b45;
+}
+
+.navbar-dark {
+  background-color: #147b45;
+}
+
+.card-body {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.card-title {
+  color: #ff7f00;
+}
+
+.footer {
+  background-color: #147b45;
+  color: #ffffff;
+}
+
+.bg-dark-green {
+  background-color: #004225;
+}
+
+/* Styles spécifiques pour la page d'accueil */
+
+.match-card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.match-card .card-body {
+  text-align: center;
+}
+
+.match-card .card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.match-card .team-odds {
+  display: flex;
+  justify-content: center;
+}
+
+.match-card .team-odds .team-odds-box {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.match-card .team-odds-box {
+  border: none;
+  background: none;
+  /* Ajoutez le reste de vos styles ici */
+}
+
+.match-card .team-odds-box p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.match-card .team-odds-box p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styles spécifiques pour le header */
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  width: 70px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-items .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+/* Styles spécifiques pour les affichages mobiles */
+
+@media (max-width: 767.98px) {
+  .logo {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .menu-items {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .menu-items .nav-item {
+    margin: 10px;
+  }
+
+  .navbar-toggler {
+    margin-left: 0;
+  }
+}
+
+/* Styles spécifiques pour la section "Match à venir" */
+
+.match-section {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.match-section h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.match-section .list-group-item {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.match-section .list-group-item:hover {
+  text-decoration: none;
+}
+
+/* Styles spécifiques pour la section "Sports" */
+
+.sports-section {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.sports-section h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sports-section .sports-list {
+  margin-top: 10px;
+}
+
+.sports-section .sports-list .sports-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.sports-section .sports-list .sport-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.sports-section .sports-list .league-item {
+  color: #fff;
+  background-color: rgb(48 48 48 / 79%);
+  padding: 0 10px;
+}
+
+.sports-section .sports-list .sport-item .sport-icon {
+  margin-right: 10px;
+}
+
+.sports-section .sports-list .sport-item .sport-title {
+  display: flex;
+  align-items: center;
+}
+
+.sports-section .sports-list .sport-item .collapse-icon {
+  margin-left: auto;
+}
+
+.sports-section .sports-list .sport-item .collapse-icon i {
+  color: #ff7f00;
+}
+
+/* CSS pour la page de connexion */
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #262626;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #ff7f00;
+  margin-bottom: 30px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #147b45;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #12833e;
+}
+
+.login-container .signup-link {
+  text-align: center;
+}
+
+.login-container .signup-link a {
+  color: #ff7f00;
+}
